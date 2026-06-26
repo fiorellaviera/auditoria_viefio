@@ -27,9 +27,13 @@ export default function App() {
 
   return (
     <div className="max-w-6xl mx-auto min-h-screen py-8">
-      {/* Cabecera con un ligero giro juguetón */}
-      <header className="bg-principal text-white p-6 text-center border-b-8 border-principalOscuro rounded-3xl shadow-xl mx-6 mb-8 transform -rotate-1">
-        <h1 className="m-0 text-4xl tracking-wide font-extrabold">🚀 Auditoría de Seguridad: EduKids 🎨</h1>
+      {/* Cabecera con animaciones */}
+      <header className="bg-principal text-white p-6 border-b-8 border-principalOscuro rounded-3xl shadow-xl mx-6 mb-8 transform -rotate-1 flex justify-center items-center">
+        <h1 className="m-0 text-4xl tracking-wide font-extrabold flex items-center gap-4">
+          <span className="inline-block animate-flotar text-5xl">🚀</span>
+          Auditoría de Seguridad: EduKids
+          <span className="inline-block animate-pintar text-5xl origin-bottom">🎨</span>
+        </h1>
       </header>
 
       <div className="flex flex-col md:flex-row px-6 gap-8">
