@@ -1,4 +1,8 @@
 import { useState } from 'react'
+import Resumen from './components/Resumen'
+import InyeccionSQL from './components/InyeccionSQL'
+import XSS from './components/XSS'
+import Comandos from './components/Comandos'
 
 export default function App() {
   const [seccionActiva, setSeccionActiva] = useState('resumen');
@@ -6,15 +10,15 @@ export default function App() {
   const renderizarSeccion = () => {
     switch (seccionActiva) {
       case 'resumen':
-        return <div><h2 className="text-3xl text-principalOscuro border-b-4 border-amarilloKids pb-3 mb-6 font-extrabold">📝 Resumen Ejecutivo</h2><p className="text-lg">Aquí irá el componente Resumen.jsx...</p></div>;
+        return <Resumen />;
       case 'sqli':
-        return <div><h2 className="text-3xl text-rojoKids border-b-4 border-rojoKids pb-3 mb-6 font-extrabold">🚨 Inyección SQL</h2><p className="text-lg">Aquí irá el componente InyeccionSQL.jsx...</p></div>;
+        return <InyeccionSQL />;
       case 'xss':
-        return <div><h2 className="text-3xl text-amarilloKids border-b-4 border-amarilloKids pb-3 mb-6 font-extrabold">🐛 Cross-Site Scripting</h2><p className="text-lg">Aquí irá el componente XSS.jsx...</p></div>;
+        return <XSS />;
       case 'comandos':
-        return <div><h2 className="text-3xl text-moradoKids border-b-4 border-moradoKids pb-3 mb-6 font-extrabold">💻 Inyección de Comandos</h2><p className="text-lg">Aquí irá el componente Comandos.jsx...</p></div>;
+        return <Comandos />;
       default:
-        return <div><h2 className="text-3xl text-principalOscuro border-b-4 border-amarilloKids pb-3 mb-6 font-extrabold">Resumen Ejecutivo</h2><p className="text-lg">Selecciona una opción del menú.</p></div>;
+        return <Resumen />;
     }
   };
 
@@ -27,7 +31,6 @@ export default function App() {
 
   return (
     <div className="max-w-6xl mx-auto min-h-screen py-8">
-      {/* Cabecera con animaciones */}
       <header className="bg-principal text-white p-6 border-b-8 border-principalOscuro rounded-3xl shadow-xl mx-6 mb-8 transform -rotate-1 flex justify-center items-center">
         <h1 className="m-0 text-4xl tracking-wide font-extrabold flex items-center gap-4">
           <span className="inline-block animate-flotar text-5xl">🚀</span>
@@ -37,7 +40,6 @@ export default function App() {
       </header>
 
       <div className="flex flex-col md:flex-row px-6 gap-8">
-        {/* Menú Lateral */}
         <aside className="w-full md:w-80 bg-white p-6 rounded-3xl shadow-lg border-4 border-borde h-fit">
           <h3 className="mt-0 text-principalOscuro border-b-4 border-dashed border-amarilloKids pb-4 text-xl font-extrabold text-center">Menú de Informes</h3>
           <nav className="flex flex-col gap-4 mt-6">
@@ -48,7 +50,6 @@ export default function App() {
           </nav>
         </aside>
 
-        {/* Contenido Principal */}
         <main className="flex-1 bg-white p-8 rounded-3xl shadow-lg border-4 border-borde">
           {renderizarSeccion()}
         </main>
