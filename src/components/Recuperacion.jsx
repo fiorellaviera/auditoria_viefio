@@ -11,6 +11,12 @@ export default function Recuperacion() {
 
       <div>
         <h3 className="text-2xl font-extrabold text-principalOscuro mb-4">🆘 Plan de Recuperación ante Desastres (DRP)</h3>
+        
+        {/* Nueva descripción del DRP */}
+        <p className="mb-6 bg-slate-100 p-4 rounded-xl border-l-4 border-principal text-base italic">
+          Un <strong>Disaster Recovery Plan (DRP)</strong> es un conjunto estructurado de políticas y procedimientos que permiten a una organización reanudar sus operaciones tecnológicas críticas tras una interrupción grave[cite: 112]. Su objetivo principal es minimizar el impacto sobre la comunidad y proteger la continuidad del negocio[cite: 112].
+        </p>
+
         <div className="grid md:grid-cols-2 gap-4">
           <div className="bg-red-50 p-5 rounded-3xl border-2 border-red-200 shadow-sm">
             <h4 className="font-extrabold text-red-700 text-xl mb-2">1. Contención</h4>
@@ -33,10 +39,10 @@ export default function Recuperacion() {
 
       <div className="mt-10">
         <h3 className="text-2xl font-extrabold text-principalOscuro mb-4">🚀 Plan de Mejora Tecnológica</h3>
-        <p className="mb-4">La arquitectura actual (DVWA simulada) es obsoleta e insegura por diseño. Se propone:</p>
+        <p className="mb-4">La arquitectura actual (DVWA simulada) es obsoleta e insegura por diseño[cite: 112]. Se propone:</p>
         <ul className="list-disc ml-6 space-y-2 bg-slate-50 p-6 rounded-3xl border-4 border-dashed border-borde">
-          <li><strong>Migración de Framework:</strong> Reescribir el portal web utilizando React para el frontend (que mitiga el XSS por defecto al escapar los datos renderizados) y Node.js para el backend.</li>
-          <li><strong>Auditorías Periódicas:</strong> Establecer pruebas de penetración (Pentesting) semestrales antes de cada periodo de matrículas.</li>
+          <li><strong>Migración de Framework:</strong> Reescribir el portal web utilizando React para el frontend (que mitiga el XSS por defecto al escapar los datos renderizados) y Node.js para el backend[cite: 112].</li>
+          <li><strong>Auditorías Periódicas:</strong> Establecer pruebas de penetración (Pentesting) semestrales antes de cada periodo de matrículas[cite: 112].</li>
         </ul>
       </div>
     </div>
