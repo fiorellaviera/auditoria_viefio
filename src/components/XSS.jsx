@@ -5,13 +5,18 @@ export default function XSS() {
         🐛 Vulnerabilidad 2: Cross-Site Scripting (XSS Reflected)
       </h2>
 
+      {/* BLOQUE DE EVIDENCIA */}
       <div>
         <h3 className="text-2xl font-extrabold text-principalOscuro mb-2">📸 Evidencia del Ataque</h3>
         <div className="bg-slate-50 p-4 rounded-3xl border-4 border-dashed border-borde text-center">
-          <img src="/img_viefio/xss_viefio.png" alt="XSS Reflected" className="mx-auto rounded-xl shadow-md max-h-96 object-contain" />
+          <img src="/public/xss_viefio.png" alt="XSS Reflected" className="mx-auto rounded-xl shadow-md max-h-96 object-contain" />
+          <p className="text-sm font-bold text-slate-500 mt-3 italic">
+            Figura 2: Evidencia del ataque XSS Reflected mostrando la ejecución exitosa del script malicioso mediante la ventana emergente (alert) en el navegador.
+          </p>
         </div>
-      </div>
+      </div> {/* <-- ESTE CIERRE ES EL QUE FALTABA */}
 
+      {/* BLOQUE DE EXPLICACIÓN */}
       <div>
         <h3 className="text-2xl font-extrabold text-principalOscuro mb-2">⚙️ Explicación Técnica</h3>
         <p>
@@ -22,6 +27,7 @@ export default function XSS() {
         </p>
       </div>
 
+      {/* BLOQUE DE GRAVEDAD */}
       <div className="bg-orange-50 border-l-8 border-amarilloKids p-5 rounded-r-2xl mt-4 shadow-sm">
         <h4 className="font-extrabold text-orange-700 text-xl mb-2">⚠️ Gravedad e Impacto</h4>
         <ul className="list-disc ml-6 space-y-1 text-orange-900">
@@ -30,6 +36,7 @@ export default function XSS() {
         </ul>
       </div>
 
+      {/* BLOQUE DE PREVENCIÓN */}
       <div>
         <h3 className="text-2xl font-extrabold text-principalOscuro mb-2 mt-6">🛡️ Políticas de Prevención y Controles</h3>
         <ul className="list-disc ml-6 space-y-2">
