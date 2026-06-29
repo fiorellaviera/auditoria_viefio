@@ -34,30 +34,26 @@ export default function CalculadoraCVSS() {
         </div>
       </div>
 
-      {/* Explicación Técnica */}
+      {/* Guía Explicativa */}
       <div className="space-y-6 text-texto text-lg">
         <h2 className="text-3xl text-principalOscuro border-b-4 border-amarilloKids pb-3 font-extrabold">
-          ¿Cómo medimos el riesgo? (CVSS v3.1)
+          ¿Cómo funciona el CVSS v3.1?
         </h2>
         <p>
-          El <strong>CVSS (Common Vulnerability Scoring System)</strong> es el estándar internacional para medir la severidad de una vulnerabilidad. No es un número al azar; es el resultado de un vector de métricas que evalúa qué tan fácil es atacar y qué tanto daño causa.
+          El <strong>CVSS (Common Vulnerability Scoring System)</strong> es el estándar mundial para evaluar qué tan grave es una vulnerabilidad de seguridad. Funciona como un "termómetro de riesgo".
         </p>
 
-        <div className="bg-white p-6 rounded-3xl border-2 border-borde shadow-sm">
-          <h4 className="font-extrabold text-principalOscuro text-xl mb-3">Caso de Estudio: SQL Injection en EduKids</h4>
-          <p className="mb-4">
-            Nuestro hallazgo de SQLi obtuvo un <strong>9.8 (Crítico)</strong>. El vector es <code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code>. Desglosémoslo:
-          </p>
-          <ul className="space-y-2 list-none">
-            <li>✅ <strong>AV:N (Network):</strong> El ataque se puede hacer remotamente por internet, sin estar en el jardín.</li>
-            <li>✅ <strong>AC:L (Low Complexity):</strong> No se necesita técnica avanzada, cualquier atacante con conocimientos básicos lo logra.</li>
-            <li>✅ <strong>PR:N / UI:N (No Privileges / No User Interaction):</strong> No requiere cuenta de usuario ni que alguien haga clic; el ataque es automático.</li>
-            <li>✅ <strong>C:H / I:H / A:H (High Impact):</strong> La Confidencialidad, Integridad y Disponibilidad se ven <strong>totalmente comprometidas</strong>.</li>
+        <div className="bg-white p-6 rounded-3xl border-2 border-borde shadow-sm space-y-4">
+          <h4 className="font-extrabold text-principalOscuro text-xl">¿Cómo se usa?</h4>
+          <ul className="list-disc ml-6 space-y-2">
+            <li><strong>Métricas de Base:</strong> Se evalúa qué tan fácil es acceder a la falla (¿es por internet o requiere estar en el jardín?), qué tanto esfuerzo requiere el ataque y si se necesita algún privilegio especial.</li>
+            <li><strong>Impacto:</strong> Se mide cuánto se daña la confidencialidad, la integridad de los datos de los niños y la disponibilidad del servicio.</li>
+            <li><strong>Resultado:</strong> El sistema entrega un número del 0 al 10. Mientras más alto sea, más urgente es aplicar un parche de seguridad.</li>
           </ul>
         </div>
 
-        <p className="font-bold text-lg bg-red-50 border-l-8 border-red-500 p-4 rounded-r-2xl">
-          En EduKids, este puntaje 9.8 significa una exposición total: RUTs, fichas médicas y datos personales de menores de edad quedan a merced de cualquier atacante. Es una infracción gravísima a la privacidad y un riesgo de seguridad física real para los niños.
+        <p className="p-4 bg-yellow-50 border-l-8 border-amarilloKids rounded-r-2xl font-bold">
+          💡 En esta auditoría, usamos este sistema para priorizar nuestros esfuerzos: las vulnerabilidades con puntajes superiores a 9.0 (como nuestras inyecciones críticas) se consideran de remediación inmediata para proteger a la comunidad de EduKids.
         </p>
       </div>
     </div>
