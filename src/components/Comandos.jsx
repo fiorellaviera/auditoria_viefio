@@ -9,7 +9,7 @@ export default function Comandos() {
       <div>
         <h3 className="text-2xl font-extrabold text-principalOscuro mb-2">📸 Evidencia del Ataque</h3>
         <div className="bg-slate-50 p-4 rounded-3xl border-4 border-dashed border-borde text-center">
-          <img src="./public/comandos_viefio.png" alt="Inyección de Comandos" className="mx-auto rounded-xl shadow-md max-h-96 object-contain" />
+          <img src="../public/comandos_viefio.png" alt="Inyección de Comandos" className="mx-auto rounded-xl shadow-md max-h-96 object-contain" />
           <p className="text-sm font-bold text-slate-500 mt-3 italic">
             Figura 3: Evidencia del ataque de Inyección de Comandos, donde se observa el uso del carácter ';' para ejecutar el comando `cat /etc/passwd` y visualizar los usuarios del sistema.
           </p>
