@@ -9,7 +9,7 @@ export default function InyeccionSQL() {
       <div>
         <h3 className="text-2xl font-extrabold text-principalOscuro mb-2">📸 Evidencia del Ataque</h3>
         <div className="bg-slate-50 p-4 rounded-3xl border-4 border-dashed border-borde text-center">
-          <img src="../public/sqli_viefio.png" alt="Inyección SQL" className="mx-auto rounded-xl shadow-md max-h-96 object-contain" />
+          <img src="/sqli_viefio.png" alt="Inyección SQL" className="mx-auto rounded-xl shadow-md max-h-96 object-contain" />
           <p className="text-sm font-bold text-slate-500 mt-3 italic">
             Figura 1: Evidencia del ataque SQL Injection donde se observa el payload `' OR '1'='1` y la respuesta del servidor con los registros de la base de datos expuestos.
           </p>
