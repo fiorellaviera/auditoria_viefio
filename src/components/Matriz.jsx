@@ -5,8 +5,18 @@ export default function Matriz() {
         🗺️ Matriz de Riesgo y Mapa de Calor
       </h2>
 
+      {/* Explicación Teórica */}
+      <div className="bg-slate-50 p-6 rounded-3xl border-2 border-borde space-y-4">
+        <p>
+          Una <strong>Matriz de Riesgo</strong> es una herramienta analítica que permite priorizar los hallazgos de seguridad mediante la combinación de dos variables: la <em>probabilidad</em> de ocurrencia y el <em>impacto</em> en el negocio[cite: 5, 9].
+        </p>
+        <p>
+          El <strong>Mapa de Calor</strong> es la representación visual de esta matriz; utiliza una escala cromática para identificar rápidamente las áreas críticas, facilitando la toma de decisiones sobre dónde aplicar los recursos de mitigación de manera prioritaria[cite: 9, 153].
+        </p>
+      </div>
+
       <p>
-        La siguiente evaluación clasifica las vulnerabilidades descubiertas en la plataforma de EduKids, basándose en la fórmula de <strong>Riesgo = Probabilidad de Explotación × Impacto en el Negocio</strong>.
+        La siguiente evaluación clasifica las vulnerabilidades descubiertas en la plataforma de EduKids, basándose en la fórmula de <strong>Riesgo = Probabilidad de Explotación × Impacto en el Negocio</strong>[cite: 5, 106].
       </p>
 
       {/* Tabla de Evaluación de Vulnerabilidades */}
@@ -61,12 +71,8 @@ export default function Matriz() {
                 <tr>
                   <td rowSpan="4" className="font-extrabold text-slate-500 transform -rotate-90 w-12 tracking-widest">PROBABILIDAD</td>
                   <td className="p-3 border-2 border-white bg-slate-100 font-bold w-24 text-right pr-4">Alta</td>
-                  <td className="p-6 border-4 border-white bg-yellow-300 font-bold text-yellow-900 rounded-tl-2xl w-1/3">
-                    Riesgo Medio
-                  </td>
-                  <td className="p-6 border-4 border-white bg-orange-500 font-bold text-white w-1/3">
-                    Riesgo Alto
-                  </td>
+                  <td className="p-6 border-4 border-white bg-yellow-300 font-bold text-yellow-900 rounded-tl-2xl w-1/3">Riesgo Medio</td>
+                  <td className="p-6 border-4 border-white bg-orange-500 font-bold text-white w-1/3">Riesgo Alto</td>
                   <td className="p-6 border-4 border-white bg-red-600 font-bold text-white rounded-tr-2xl animate-pulse shadow-inner w-1/3 relative">
                     <span className="block text-xl">🚨 SQLi</span>
                     <span className="text-xs font-normal opacity-90">Riesgo Crítico</span>
@@ -74,25 +80,17 @@ export default function Matriz() {
                 </tr>
                 <tr>
                   <td className="p-3 border-2 border-white bg-slate-100 font-bold w-24 text-right pr-4">Media</td>
-                  <td className="p-6 border-4 border-white bg-green-400 font-bold text-green-950">
-                    Riesgo Bajo
-                  </td>
+                  <td className="p-6 border-4 border-white bg-green-400 font-bold text-green-950">Riesgo Bajo</td>
                   <td className="p-6 border-4 border-white bg-orange-400 font-bold text-orange-950 shadow-inner relative">
                     <span className="block text-xl">🐛 XSS</span>
                     <span className="text-xs font-normal opacity-90">Riesgo Alto</span>
                   </td>
-                  <td className="p-6 border-4 border-white bg-red-500 font-bold text-white">
-                    Riesgo Crítico
-                  </td>
+                  <td className="p-6 border-4 border-white bg-red-500 font-bold text-white">Riesgo Crítico</td>
                 </tr>
                 <tr>
                   <td className="p-3 border-2 border-white bg-slate-100 font-bold w-24 text-right pr-4">Baja</td>
-                  <td className="p-6 border-4 border-white bg-green-400 font-bold text-green-950 rounded-bl-2xl">
-                    Riesgo Bajo
-                  </td>
-                  <td className="p-6 border-4 border-white bg-yellow-300 font-bold text-yellow-900">
-                    Riesgo Medio
-                  </td>
+                  <td className="p-6 border-4 border-white bg-green-400 font-bold text-green-950 rounded-bl-2xl">Riesgo Bajo</td>
+                  <td className="p-6 border-4 border-white bg-yellow-300 font-bold text-yellow-900">Riesgo Medio</td>
                   <td className="p-6 border-4 border-white bg-red-600 font-bold text-white rounded-br-2xl animate-pulse shadow-inner relative">
                     <span className="block text-xl">💻 Comandos</span>
                     <span className="text-xs font-normal opacity-90">Riesgo Crítico</span>
