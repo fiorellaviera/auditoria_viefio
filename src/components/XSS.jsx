@@ -9,12 +9,12 @@ export default function XSS() {
       <div>
         <h3 className="text-2xl font-extrabold text-principalOscuro mb-2">📸 Evidencia del Ataque</h3>
         <div className="bg-slate-50 p-4 rounded-3xl border-4 border-dashed border-borde text-center">
-          <img src="/public/xss_viefio.png" alt="XSS Reflected" className="mx-auto rounded-xl shadow-md max-h-96 object-contain" />
+          <img src="./public/xss_viefio.png" alt="XSS Reflected" className="mx-auto rounded-xl shadow-md max-h-96 object-contain" />
           <p className="text-sm font-bold text-slate-500 mt-3 italic">
             Figura 2: Evidencia del ataque XSS Reflected mostrando la ejecución exitosa del script malicioso mediante la ventana emergente (alert) en el navegador.
           </p>
         </div>
-      </div> {/* <-- ESTE CIERRE ES EL QUE FALTABA */}
+      </div> 
 
       {/* BLOQUE DE EXPLICACIÓN */}
       <div>
